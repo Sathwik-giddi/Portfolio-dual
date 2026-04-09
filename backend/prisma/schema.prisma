@@ -1,0 +1,132 @@
+generator client {
+  provider = "prisma-client-js"
+  engineType = "library"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                String             @id @default(uuid())
+  email             String             @unique
+  passwordHash      String
+  name              String?
+  stripeCustomerId  String?            @unique
+  subscriptionPlan  String             @default("FREE") // FREE, PRO, ENTERPRISE
+  createdAt         DateTime           @default(now())
+  connectedAccounts ConnectedAccount[]
+  aiInsights        AiInsight[]
+  notifications     Notification[]
+  usageEvents       UsageEvent[]
+}
+
+model UsageEvent {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  eventType String   // e.g. GENERATE_INSIGHT, VIEW_DASHBOARD
+  metadata  Json?
+  createdAt DateTime @default(now())
+}
+
+model Notification {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  type      String   // ALERT, INSIGHT
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model ConnectedAccount {
+  id                    String     @id @default(uuid())
+  userId                String
+  user                  User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  platform              String // 'meta' or 'google'
+  encryptedAccessToken  String
+  encryptedRefreshToken String?
+  platformAccountId     String
+  lastSyncedAt          DateTime?
+  createdAt             DateTime   @default(now())
+  campaigns             Campaign[]
+
+  @@unique([userId, platform, platformAccountId])
+}
+
+model Campaign {
+  id                 String           @id @default(uuid())
+  connectedAccountId String
+  connectedAccount   ConnectedAccount @relation(fields: [connectedAccountId], references: [id], onDelete: Cascade)
+  platformCampaignId String
+  name               String
+  status             String
+  dailyBudget        Decimal?
+  currency           String           @default("USD")
+  platform           String
+  metrics            CampaignMetric[]
+  ads                Ad[]
+  aiInsights         AiInsight[]
+
+  @@unique([connectedAccountId, platformCampaignId])
+}
+
+model Ad {
+  id                 String     @id @default(uuid())
+  campaignId         String
+  campaign           Campaign   @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  platformAdId       String
+  name               String
+  status             String
+  creativeId         String?    // Link to internal creative if we have one
+  metrics            AdMetric[]
+  aiInsights         AiInsight[]
+
+  @@unique([campaignId, platformAdId])
+}
+
+model CampaignMetric {
+  id          BigInt   @id @default(autoincrement())
+  campaignId  String
+  campaign    Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  date        DateTime @db.Date
+  impressions Int      @default(0)
+  clicks      Int      @default(0)
+  spend       Decimal  @default(0.00) @db.Decimal(20, 2)
+  conversions Int      @default(0)
+  createdAt   DateTime @default(now())
+
+  @@unique([campaignId, date])
+}
+
+model AdMetric {
+  id          BigInt   @id @default(autoincrement())
+  adId        String
+  ad          Ad       @relation(fields: [adId], references: [id], onDelete: Cascade)
+  date        DateTime @db.Date
+  impressions Int      @default(0)
+  clicks      Int      @default(0)
+  spend       Decimal  @default(0.00) @db.Decimal(20, 2)
+  conversions Int      @default(0)
+  videoViews  Int      @default(0) // Specific for video ads
+  ctr         Decimal     @default(0.00) @db.Decimal(5, 2)
+  cpc         Decimal  @default(0.00) @db.Decimal(10, 2)
+  createdAt   DateTime @default(now())
+
+  @@unique([adId, date])
+}
+
+model AiInsight {
+  id          String    @id @default(uuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  campaignId  String?
+  campaign    Campaign? @relation(fields: [campaignId], references: [id])
+  adId        String?
+  ad          Ad?       @relation(fields: [adId], references: [id])
+  insightText String
+  severity    String // 'low', 'medium', 'high'
+  generatedAt DateTime  @default(now())
+}
