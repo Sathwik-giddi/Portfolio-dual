@@ -27,12 +27,12 @@ export function TestimonialsSection({ items }: TestimonialsSectionProps) {
                 .join("")
                 .slice(0, 2)}
             </div>
-            <p className="text-base leading-8 text-[var(--foreground)]/78">
+            <p className="testimonial-quote text-base leading-8">
               “{item.quote}”
             </p>
-            <div className="mt-8 border-t border-black/8 pt-5">
+            <div className="testimonial-meta mt-8 border-t pt-5">
               <p className="text-base font-medium text-[var(--foreground)]">{item.name}</p>
-              <p className="mt-1 text-sm text-[var(--foreground)]/56">{item.role}</p>
+              <p className="testimonial-role mt-1 text-sm">{item.role}</p>
             </div>
           </Reveal>
         ))}
