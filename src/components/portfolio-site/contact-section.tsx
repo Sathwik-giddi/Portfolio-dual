@@ -16,10 +16,10 @@ export function ContactSection({
     <section id="contact" className="relative mx-auto max-w-7xl px-6 pb-28 pt-16 sm:px-8 lg:px-10">
       <Reveal className="glass-panel rounded-[2.5rem] px-8 py-12 sm:px-12">
         <p className="section-kicker">Contact</p>
-        <h2 className="mt-4 max-w-3xl font-serif text-4xl tracking-[-0.04em] text-white sm:text-6xl">
+        <h2 className="mt-4 max-w-3xl font-serif text-4xl tracking-[-0.04em] text-[var(--foreground)] sm:text-6xl">
           If you want someone who can build and present well, let&apos;s talk.
         </h2>
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-white/68">
+        <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)]">
           I&apos;m targeting roles where product instinct, frontend execution, and AI
           implementation all matter. That is the lane where I do my best work.
         </p>
@@ -32,7 +32,11 @@ export function ContactSection({
           </a>
           <a
             href={resumeHref}
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-white/12 bg-white/6 px-6 py-3.5 text-white"
+            className="inline-flex items-center justify-center gap-2 rounded-full border px-6 py-3.5 text-[var(--foreground)]"
+            style={{
+              borderColor: "rgba(127, 89, 72, 0.14)",
+              background: "rgba(255,255,255,0.56)",
+            }}
           >
             Download resume
           </a>

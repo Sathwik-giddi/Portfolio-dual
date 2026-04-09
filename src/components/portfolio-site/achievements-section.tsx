@@ -30,7 +30,7 @@ export function AchievementsSection({ items }: AchievementsSectionProps) {
             <h3 className="mt-4 text-2xl font-semibold tracking-[-0.03em] text-[var(--foreground)]">
               {item.title}
             </h3>
-            <p className="mt-4 text-sm leading-7 text-white/65">{item.detail}</p>
+            <p className="mt-4 text-sm leading-7 text-[var(--muted)]">{item.detail}</p>
           </Reveal>
         ))}
       </div>

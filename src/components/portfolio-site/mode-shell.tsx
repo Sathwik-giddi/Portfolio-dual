@@ -7,7 +7,7 @@ type ModeShellProps = {
 
 export function ModeShell({ children, mode }: ModeShellProps) {
   return (
-    <main className={`portfolio-shell mode-${mode} text-white`}>
+    <main className={`portfolio-shell mode-${mode}`}>
       <div className="portfolio-noise" />
       <div className="portfolio-grid" />
       <div className="portfolio-orb portfolio-orb-a" />

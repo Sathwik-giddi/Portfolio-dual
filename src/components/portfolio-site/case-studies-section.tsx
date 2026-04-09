@@ -40,16 +40,16 @@ export function CaseStudiesSection({ studies }: CaseStudiesSectionProps) {
 
               <div className="grid gap-5 md:grid-cols-3">
                 <div className="rounded-[1.35rem] border border-white/8 bg-black/10 p-5">
-                  <p className="text-sm uppercase tracking-[0.25em] text-white/40">Problem</p>
-                  <p className="mt-3 text-sm leading-7 text-white/60">{study.problem}</p>
+                  <p className="text-sm uppercase tracking-[0.25em] text-[var(--muted)]">Problem</p>
+                  <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{study.problem}</p>
                 </div>
                 <div className="rounded-[1.35rem] border border-white/8 bg-black/10 p-5">
-                  <p className="text-sm uppercase tracking-[0.25em] text-white/40">Build</p>
-                  <p className="mt-3 text-sm leading-7 text-white/60">{study.build}</p>
+                  <p className="text-sm uppercase tracking-[0.25em] text-[var(--muted)]">Build</p>
+                  <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{study.build}</p>
                 </div>
                 <div className="rounded-[1.35rem] border border-white/8 bg-black/10 p-5">
-                  <p className="text-sm uppercase tracking-[0.25em] text-white/40">Outcome</p>
-                  <p className="mt-3 text-sm leading-7 text-white/60">{study.outcome}</p>
+                  <p className="text-sm uppercase tracking-[0.25em] text-[var(--muted)]">Outcome</p>
+                  <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{study.outcome}</p>
                 </div>
               </div>
             </div>

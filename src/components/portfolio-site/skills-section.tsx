@@ -20,8 +20,8 @@ export function SkillsSection({ groups }: SkillsSectionProps) {
       <div className="mt-14 grid gap-8 lg:grid-cols-3">
         {groups.map((group, index) => (
           <Reveal key={group.title} delay={index * 0.08} className="glass-panel rounded-[2rem] p-7">
-            <p className="text-xl font-semibold text-white">{group.title}</p>
-            <p className="mt-3 text-sm leading-7 text-white/62">{group.description}</p>
+            <p className="text-xl font-semibold text-[var(--foreground)]">{group.title}</p>
+            <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{group.description}</p>
             <div className="mt-6 flex flex-wrap gap-2">
               {group.items.map((item) => (
                 <span key={item} className="tag-chip text-sm">

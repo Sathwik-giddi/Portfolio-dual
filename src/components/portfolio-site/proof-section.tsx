@@ -24,7 +24,7 @@ export function ProofSection({ proofPoints, hiringReasons }: ProofSectionProps) 
             {proofPoints.map((point) => (
               <div key={point.title} className="rounded-[1.35rem] border border-white/8 bg-black/10 p-5">
                 <p className="text-lg font-medium text-[var(--foreground)]">{point.title}</p>
-                <p className="mt-2 text-sm leading-7 text-white/60">{point.description}</p>
+                <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{point.description}</p>
               </div>
             ))}
           </div>
@@ -36,7 +36,7 @@ export function ProofSection({ proofPoints, hiringReasons }: ProofSectionProps) 
           <p className="section-kicker">Hiring Signal</p>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             {hiringReasons.map((reason) => (
-              <div key={reason} className="rounded-[1.25rem] border border-white/8 bg-black/10 p-5 text-sm leading-7 text-white/60">
+              <div key={reason} className="rounded-[1.25rem] border border-white/8 bg-black/10 p-5 text-sm leading-7 text-[var(--muted)]">
                 {reason}
               </div>
             ))}

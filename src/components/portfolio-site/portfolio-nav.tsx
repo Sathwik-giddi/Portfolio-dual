@@ -29,12 +29,16 @@ export function PortfolioNav({
       }`}
     >
       <div className="min-w-0">
-        <p className="text-[0.72rem] uppercase tracking-[0.32em] text-white/46">{name}</p>
-        <p className="mt-1 text-[0.98rem] text-white/86">{title}</p>
+        <p className="text-[0.72rem] uppercase tracking-[0.32em] text-[var(--muted)]">{name}</p>
+        <p className="mt-1 text-[0.98rem] text-[var(--foreground)]">{title}</p>
       </div>
-      <div className="flex flex-wrap items-center gap-5 text-[0.95rem] text-white/74">
+      <div className="flex flex-wrap items-center gap-5 text-[0.95rem] text-[var(--muted)]">
         {nav.map((item) => (
-          <a key={item.href} href={item.href} className="hover:text-white transition-colors">
+          <a
+            key={item.href}
+            href={item.href}
+            className="transition-colors hover:text-[var(--foreground)]"
+          >
             {item.label}
           </a>
         ))}

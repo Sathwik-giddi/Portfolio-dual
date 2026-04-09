@@ -11,12 +11,12 @@ export function MetricsStrip({ metrics }: MetricsStripProps) {
       <div className="grid gap-4 md:grid-cols-4">
         {metrics.map((metric, index) => (
           <Reveal key={metric.label} delay={index * 0.08} className="metric-card">
-            <p className="text-4xl font-semibold tracking-[-0.04em] text-white">
+            <p className="text-4xl font-semibold tracking-[-0.04em] text-[var(--foreground)]">
               {metric.value}
             </p>
-            <p className="mt-3 text-sm leading-6 text-white/78">{metric.label}</p>
+            <p className="mt-3 text-sm leading-6 text-[var(--foreground)]/78">{metric.label}</p>
             {metric.context ? (
-              <p className="mt-2 text-xs leading-5 text-white/42">{metric.context}</p>
+              <p className="mt-2 text-xs leading-5 text-[var(--muted)]">{metric.context}</p>
             ) : null}
           </Reveal>
         ))}

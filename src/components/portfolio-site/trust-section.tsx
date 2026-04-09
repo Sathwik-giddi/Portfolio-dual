@@ -20,12 +20,18 @@ export function TrustSection({
             <h2 className="mt-4 font-serif text-4xl tracking-[-0.04em] text-[var(--foreground)]">
               The reason this portfolio can sell to two audiences.
             </h2>
-            <p className="mt-5 text-[1rem] leading-8 text-[var(--foreground)]/60">
+            <p className="mt-5 text-[1rem] leading-8 text-[var(--muted)]">
               {differentiator}
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
-            <div className="rounded-[1.35rem] border border-white/8 bg-black/10 p-5">
+            <div
+              className="rounded-[1.35rem] border p-5"
+              style={{
+                borderColor: "rgba(127, 89, 72, 0.14)",
+                background: "rgba(255,255,255,0.56)",
+              }}
+            >
               <p className="text-sm uppercase tracking-[0.24em] text-[var(--accent-strong)]/72">
                 Response
               </p>
@@ -33,7 +39,13 @@ export function TrustSection({
                 {responseTime}
               </p>
             </div>
-            <div className="rounded-[1.35rem] border border-white/8 bg-black/10 p-5">
+            <div
+              className="rounded-[1.35rem] border p-5"
+              style={{
+                borderColor: "rgba(127, 89, 72, 0.14)",
+                background: "rgba(255,255,255,0.56)",
+              }}
+            >
               <p className="text-sm uppercase tracking-[0.24em] text-[var(--accent-strong)]/72">
                 Best Fit
               </p>

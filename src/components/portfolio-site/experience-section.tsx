@@ -24,13 +24,13 @@ export function ExperienceSection({ items }: ExperienceSectionProps) {
           <Reveal key={item.title} delay={index * 0.08} className="timeline-card">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
               <div>
-                <p className="text-xl font-semibold text-white">{item.title}</p>
+                <p className="text-xl font-semibold text-[var(--foreground)]">{item.title}</p>
                 <p className="mt-2 text-base text-[var(--accent)]">{item.company}</p>
-                <p className="mt-4 max-w-2xl text-base leading-7 text-white/66">
+                <p className="mt-4 max-w-2xl text-base leading-7 text-[var(--muted)]">
                   {item.detail}
                 </p>
               </div>
-              <p className="text-sm uppercase tracking-[0.25em] text-white/45">
+              <p className="text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
                 {item.period}
               </p>
             </div>
