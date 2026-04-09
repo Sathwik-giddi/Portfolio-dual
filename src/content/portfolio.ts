@@ -217,7 +217,7 @@ export const portfolioContent = {
         "A multi-source operating dashboard combining CRM, revenue, support, and AI-generated weekly summaries into one live executive surface.",
       clientSummary:
         "Built a founder dashboard that made revenue, pipeline, and team signals readable in one glance instead of six scattered tools.",
-      image: "/project-previews/grocery.png",
+      image: "/project-previews/signalos.png",
       tags: ["Next.js", "Postgres", "OpenAI API", "Stripe", "Charts"],
       outcome: "Turned fragmented business telemetry into a single product-quality operating layer.",
       clientOutcome:
@@ -230,7 +230,7 @@ export const portfolioContent = {
         "An AI-assisted matchmaking platform for creators and brands with profile scoring, campaign briefs, and instant shortlist generation.",
       clientSummary:
         "Built a slick collaboration engine that helped brands discover the right creators fast and launch campaigns with less back-and-forth.",
-      image: "/project-previews/gently.png",
+      image: "/project-previews/musematch.png",
       tags: ["React", "Supabase", "Embeddings", "Messaging", "Ranker"],
       outcome: "Blended search, scoring, and product UX into one high-trust workflow.",
       clientOutcome:
@@ -243,7 +243,7 @@ export const portfolioContent = {
         "A creative analytics suite for paid media teams with AI angle suggestions, winning-creative breakdowns, and campaign health monitoring.",
       clientSummary:
         "Built a sharper ad-performance product that showed what was winning, why it was winning, and what to test next.",
-      image: "/project-previews/ads.png",
+      image: "/project-previews/adpulse.png",
       tags: ["Next.js", "Python", "Meta API", "D3", "Forecasting"],
       outcome: "Created a decision-ready surface for creative teams instead of another analytics maze.",
       clientOutcome:
