@@ -32,11 +32,7 @@ export function ContactSection({
           </a>
           <a
             href={resumeHref}
-            className="inline-flex items-center justify-center gap-2 rounded-full border px-6 py-3.5 text-[var(--foreground)]"
-            style={{
-              borderColor: "rgba(127, 89, 72, 0.14)",
-              background: "rgba(255,255,255,0.56)",
-            }}
+            className="technical-subpanel inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-[var(--foreground)]"
           >
             Download resume
           </a>

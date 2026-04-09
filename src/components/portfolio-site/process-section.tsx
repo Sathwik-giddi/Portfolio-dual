@@ -26,7 +26,7 @@ export function ProcessSection({ steps }: ProcessSectionProps) {
             <h3 className="mt-4 text-2xl font-semibold tracking-[-0.03em] text-[var(--foreground)]">
               {step.title}
             </h3>
-            <p className="mt-4 text-sm leading-7 text-[var(--foreground)]/60">
+            <p className="mt-4 text-sm leading-7 text-[var(--foreground)]/82">
               {step.description}
             </p>
           </Reveal>

@@ -31,7 +31,7 @@ export function FreelanceHeroSection({
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: easing }}
-            className="freelance-status-pill inline-flex items-center gap-3 px-4 py-2 text-sm text-[var(--foreground)]/80"
+            className="freelance-status-pill inline-flex items-center gap-3 px-4 py-2 text-sm text-[var(--foreground)]/92"
           >
             <span className="freelance-status-dot" />
             {availability}
@@ -53,7 +53,7 @@ export function FreelanceHeroSection({
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.18, ease: easing }}
-            className="mt-8 max-w-2xl text-[1.06rem] leading-8 text-[var(--foreground)]/66"
+            className="mt-8 max-w-2xl text-[1.06rem] leading-8 text-[var(--foreground)]/82"
           >
             {description}
           </motion.p>
@@ -62,7 +62,7 @@ export function FreelanceHeroSection({
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.24, ease: easing }}
-            className="freelance-differentiator mt-6 max-w-xl text-sm leading-7 text-[var(--foreground)]/56"
+            className="freelance-differentiator mt-6 max-w-xl text-sm leading-7"
           >
             {differentiator}
           </motion.p>
@@ -121,7 +121,7 @@ export function FreelanceHeroSection({
             <h2 className="mt-4 max-w-md text-3xl font-semibold tracking-[-0.05em] text-[var(--foreground)] sm:text-[2.35rem]">
               Founders who want speed, taste, and zero messy handoff energy.
             </h2>
-            <p className="mt-4 max-w-md text-sm leading-7 text-[var(--foreground)]/62">
+            <p className="mt-4 max-w-md text-sm leading-7 text-[var(--foreground)]/78">
               AI MVPs, dashboards, automation flows, and product surfaces that feel
               good before the first demo even starts.
             </p>
@@ -142,7 +142,7 @@ export function FreelanceHeroSection({
 
           <div className="freelance-montage-row">
             <div className="freelance-hero-panel freelance-hero-panel-mini">
-              <p className="text-sm uppercase tracking-[0.28em] text-[var(--foreground)]/42">
+              <p className="text-sm uppercase tracking-[0.28em] text-[var(--foreground)]/62">
                 Reply time
               </p>
               <p className="mt-3 text-2xl font-semibold text-[var(--foreground)]">
@@ -150,7 +150,7 @@ export function FreelanceHeroSection({
               </p>
             </div>
             <div className="freelance-hero-panel freelance-hero-panel-list">
-              <p className="text-sm uppercase tracking-[0.28em] text-[var(--foreground)]/42">
+              <p className="text-sm uppercase tracking-[0.28em] text-[var(--foreground)]/62">
                 Usually hired for
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
@@ -173,7 +173,7 @@ export function FreelanceHeroSection({
             </div>
           </div>
 
-          <div className="mt-6 flex flex-wrap gap-3 text-sm text-[var(--foreground)]/62">
+          <div className="mt-6 flex flex-wrap gap-3 text-sm text-[var(--foreground)]/82">
             {socialLinks.map((link) => (
               <a
                 key={link.href}

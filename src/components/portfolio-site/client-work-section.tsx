@@ -36,7 +36,7 @@ export function ClientWorkSection({ items }: ClientWorkSectionProps) {
               {item.headline}
             </h3>
 
-            <p className="mt-4 text-[0.98rem] leading-7 text-[var(--foreground)]/62">
+            <p className="mt-4 text-[0.98rem] leading-7 text-[var(--foreground)]/82">
               {item.summary}
             </p>
 

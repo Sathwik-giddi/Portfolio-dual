@@ -25,13 +25,7 @@ export function TrustSection({
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
-            <div
-              className="rounded-[1.35rem] border p-5"
-              style={{
-                borderColor: "rgba(127, 89, 72, 0.14)",
-                background: "rgba(255,255,255,0.56)",
-              }}
-            >
+            <div className="technical-subpanel rounded-[1.35rem] p-5">
               <p className="text-sm uppercase tracking-[0.24em] text-[var(--accent-strong)]/72">
                 Response
               </p>
@@ -39,13 +33,7 @@ export function TrustSection({
                 {responseTime}
               </p>
             </div>
-            <div
-              className="rounded-[1.35rem] border p-5"
-              style={{
-                borderColor: "rgba(127, 89, 72, 0.14)",
-                background: "rgba(255,255,255,0.56)",
-              }}
-            >
+            <div className="technical-subpanel rounded-[1.35rem] p-5">
               <p className="text-sm uppercase tracking-[0.24em] text-[var(--accent-strong)]/72">
                 Best Fit
               </p>

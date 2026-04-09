@@ -34,7 +34,7 @@ export function FreelanceOutcomesSection({
             <p className="text-[1.55rem] font-semibold tracking-[-0.04em] text-[var(--foreground)]">
               {item.title}
             </p>
-            <p className="mt-4 text-sm leading-7 text-[var(--foreground)]/60">
+            <p className="mt-4 text-sm leading-7 text-[var(--foreground)]/82">
               {item.description}
             </p>
           </Reveal>

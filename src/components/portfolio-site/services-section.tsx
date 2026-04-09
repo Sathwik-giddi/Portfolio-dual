@@ -30,7 +30,7 @@ export function ServicesSection({ services }: ServicesSectionProps) {
               </div>
               <span className="freelance-service-badge">Popular</span>
             </div>
-            <p className="mt-4 text-sm leading-7 text-[var(--foreground)]/62">
+            <p className="mt-4 text-sm leading-7 text-[var(--foreground)]/82">
               {service.description}
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
@@ -40,7 +40,7 @@ export function ServicesSection({ services }: ServicesSectionProps) {
                 </span>
               ))}
             </div>
-            <p className="freelance-service-result mt-5 text-sm leading-6 text-[var(--foreground)]/48">
+            <p className="freelance-service-result mt-5 text-sm leading-6">
               {service.result}
             </p>
           </Reveal>
