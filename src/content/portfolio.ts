@@ -211,43 +211,43 @@ export const portfolioContent = {
   ] satisfies ProofPoint[],
   featuredProjects: [
     {
-      title: "Legal LLM Fine-Tuning Stack",
-      slug: "legal-llm-finetuning",
+      title: "SignalOS Founder Command Center",
+      slug: "signalos-founder-command-center",
       summary:
-        "LoRA and QLoRA pipeline for contract understanding, tuned on 10,000 legal documents and deployed with FastAPI on AWS.",
+        "A multi-source operating dashboard combining CRM, revenue, support, and AI-generated weekly summaries into one live executive surface.",
       clientSummary:
-        "Built an AI workflow that made contract-heavy work faster, more consistent, and much easier to review.",
-      image: "/project-previews/qfind.png",
-      tags: ["PyTorch", "HuggingFace", "LoRA", "FastAPI", "AWS"],
-      outcome: "Shipped measurable NLP performance instead of a speculative prototype.",
+        "Built a founder dashboard that made revenue, pipeline, and team signals readable in one glance instead of six scattered tools.",
+      image: "/project-previews/grocery.png",
+      tags: ["Next.js", "Postgres", "OpenAI API", "Stripe", "Charts"],
+      outcome: "Turned fragmented business telemetry into a single product-quality operating layer.",
       clientOutcome:
-        "Turned a complex AI concept into a product-shaped tool that could save serious review time.",
+        "Gave the client a dashboard that felt board-meeting ready, not like an internal spreadsheet clone.",
     },
     {
-      title: "AI Video Interviewer",
-      slug: "ai-video-interviewer",
+      title: "MuseMatch Creator Collab Engine",
+      slug: "musematch-creator-collab-engine",
       summary:
-        "Technical interview system with proctoring, multilingual voice flow, and real-time assessment designed for remote hiring.",
+        "An AI-assisted matchmaking platform for creators and brands with profile scoring, campaign briefs, and instant shortlist generation.",
       clientSummary:
-        "Built a hiring product where AI, voice, and video worked together in one usable experience.",
-      image: "/project-previews/photobooth.png",
-      tags: ["React", "Gemini API", "Flask", "WebRTC", "Firebase"],
-      outcome: "Combined product UX with AI orchestration and real-time media constraints.",
+        "Built a slick collaboration engine that helped brands discover the right creators fast and launch campaigns with less back-and-forth.",
+      image: "/project-previews/gently.png",
+      tags: ["React", "Supabase", "Embeddings", "Messaging", "Ranker"],
+      outcome: "Blended search, scoring, and product UX into one high-trust workflow.",
       clientOutcome:
-        "Made a complex AI idea feel simple enough to demo, trust, and use.",
+        "Made a messy talent-sourcing workflow feel premium, fast, and actually enjoyable to use.",
     },
     {
-      title: "Quantum Monitoring Dashboard",
-      slug: "quantum-dashboard",
+      title: "AdPulse Creative Intelligence Suite",
+      slug: "adpulse-creative-intelligence-suite",
       summary:
-        "A live job intelligence dashboard for IBM Quantum workloads with predictive failure visibility and visual telemetry.",
+        "A creative analytics suite for paid media teams with AI angle suggestions, winning-creative breakdowns, and campaign health monitoring.",
       clientSummary:
-        "Turned dense technical data into a live dashboard that was fast to read and easy to act on.",
+        "Built a sharper ad-performance product that showed what was winning, why it was winning, and what to test next.",
       image: "/project-previews/ads.png",
-      tags: ["Next.js", "Qiskit", "D3", "WebSockets"],
-      outcome: "Turned complex infrastructure data into a clear visual decision surface.",
+      tags: ["Next.js", "Python", "Meta API", "D3", "Forecasting"],
+      outcome: "Created a decision-ready surface for creative teams instead of another analytics maze.",
       clientOutcome:
-        "Made a niche technical workflow clearer, sharper, and more presentable.",
+        "Turned campaign chaos into something operators could act on in minutes, not hours.",
     },
   ] satisfies FeaturedProject[],
   caseStudies: [
